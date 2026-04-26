@@ -1,0 +1,7 @@
+"indicador","valor"
+"longitud_theta",3
+"longitud_theta_dot",3
+"loss_inicial",0.000569274695467809
+"grad_norm_inicial",0.0153395460868169
+"speed_inicial",0.00153395460868169
+"eta",0.1

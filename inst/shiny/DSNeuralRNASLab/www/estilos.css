@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+}
+
+h2, h3, h4 {
+  color: #1f4e79;
+}
+
+.well {
+  background-color: #ffffff;
+  border: 1px solid #d9e2ec;
+}
+
+.nota-lateral {
+  font-size: 12px;
+  color: #4a5568;
+  line-height: 1.4;
+}
+
+.codigo-r {
+  background-color: #f1f5f9;
+  border-left: 4px solid #1f4e79;
+  padding: 10px;
+  font-family: Consolas, monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+.bloque-explicacion {
+  background-color: #edf6ff;
+  border-left: 4px solid #2b6cb0;
+  padding: 12px;
+  margin-bottom: 15px;
+}

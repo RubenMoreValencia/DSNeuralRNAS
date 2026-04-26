@@ -1,0 +1,2 @@
+"caso","n_original","n_obs","n_features","horizonte","loss_inicial","loss_final","reduccion_abs","reduccion_rel","descendente_global","factible"
+"FNL-RNAS",60,60,2,NA,NA,0.19326707504784,NA,NA,NA,TRUE

@@ -1,0 +1,2 @@
+"activation","eta","T_configurado","iter_final","parada","loss_inicial","loss_final","delta_loss","reduccion_abs","reduccion_rel","descendente_global"
+"tanh",0.1,100,100,"max_iter",0.000569274695467809,0.000248111289482336,-0.000321163405985474,0.000321163405985474,0.564162448361688,TRUE

@@ -1,0 +1,10 @@
+"indicador","valor"
+"ventana",5
+"tau_loss",0.01
+"tau_grad",0.001
+"eps_loss",1e-08
+"eps_grad",1e-04
+"usar_suavizado",1
+"n_estados",101
+"n_segmentos",3
+"n_regimenes",3

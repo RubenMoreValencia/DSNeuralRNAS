@@ -1,0 +1,2 @@
+"caso","n_original","n_obs","n_features","horizonte","loss_inicial","loss_final","reduccion_abs","reduccion_rel","descendente_global","factible"
+"STD2-RNAS",60,59,5,1,0.239237084202805,0.00715439885352877,0.232082685349276,0.970094942105782,TRUE,NA

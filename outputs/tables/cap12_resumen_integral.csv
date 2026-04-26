@@ -1,0 +1,4 @@
+"integracion","n_obs","n_features","horizonte","loss_inicial","loss_final","reduccion_rel"
+"STD2-RNAS",59,5,1,0.239237084202805,0.00715439885352877,0.970094942105782
+"SimuDS-RNAS",117,1,1,0.236543090292252,0.00777584202512645,0.967127164798941
+"FNL-RNAS",59,2,NA,NA,NA,NA
