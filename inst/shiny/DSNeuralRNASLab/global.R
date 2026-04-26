@@ -1,5 +1,10 @@
+options(shiny.sanitize.errors = FALSE)
+options(shiny.fullstacktrace = TRUE)
+
 library(shiny)
 library(DT)
+library(DSNeuralRNAS)
+
 
 if (!requireNamespace("DSNeuralRNAS", quietly = TRUE)) {
   stop("Debe instalar o cargar el paquete DSNeuralRNAS antes de ejecutar la app.")
