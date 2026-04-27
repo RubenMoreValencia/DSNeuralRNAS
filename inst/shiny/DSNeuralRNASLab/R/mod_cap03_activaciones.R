@@ -43,7 +43,7 @@ mod_cap03_server <- function(id) {
 
       z <- sum(w * x) + b
 
-      y_hat <- rnas_neuron_forward(
+      y_hat <- DSNeuralRNAS::rnas_neuron_forward(
         x = x,
         w = w,
         b = b,
