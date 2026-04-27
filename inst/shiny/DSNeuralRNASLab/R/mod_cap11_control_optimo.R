@@ -262,7 +262,7 @@ mod_cap11_server <- function(id) {
       costo_grid <- do.call(
         rbind,
         lapply(eta_grid, function(eta_i) {
-          costo_i <- rnas_eta_costo_local(
+          costo_i <- DSNeuralRNAS::rnas_eta_costo_local(
             X = X,
             y = y,
             theta = theta0,
@@ -373,7 +373,7 @@ mod_cap11_server <- function(id) {
 
         comparacion <- tryCatch(
           {
-            rnas_comparar_meta_politicas(
+            DSNeuralRNAS::rnas_comparar_meta_politicas(
               X = X,
               y = y,
               theta0 = theta0,
