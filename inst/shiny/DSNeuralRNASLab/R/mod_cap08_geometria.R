@@ -301,7 +301,7 @@ mod_cap08_server <- function(id) {
       trayectoria_geom <- NULL
 
       if (isTRUE(input$usar_trayectoria)) {
-        dinamica <- rnas_integrar_dinamica_neuron(
+        dinamica <- DSNeuralRNAS::rnas_integrar_dinamica_neuron(
           X = X,
           y = y,
           theta0 = theta,
@@ -311,7 +311,7 @@ mod_cap08_server <- function(id) {
           activation = input$activation
         )
 
-        trayectoria_geom <- rnas_geometria_trayectoria_neuron(
+        trayectoria_geom <- DSNeuralRNAS::rnas_geometria_trayectoria_neuron(
           object = dinamica,
           X = X,
           y = y,
