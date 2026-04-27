@@ -112,7 +112,7 @@ mod_cap10_server <- function(id) {
       theta0 <- c(input$w1, input$w2, input$b)
       policy <- construir_policy_cap10()
 
-      modelo <- rnas_train_neuron_control_eta(
+      modelo <- DSNeuralRNAS::rnas_train_neuron_control_eta(
         X = X,
         y = y,
         theta0 = theta0,

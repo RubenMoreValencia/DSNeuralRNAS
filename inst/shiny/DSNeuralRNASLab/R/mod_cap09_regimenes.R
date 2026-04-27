@@ -251,7 +251,7 @@ mod_cap09_server <- function(id) {
       y <- datos$y
       theta0 <- c(input$w1, input$w2, input$b)
 
-      dinamica <- rnas_integrar_dinamica_neuron(
+      dinamica <- DSNeuralRNAS::rnas_integrar_dinamica_neuron(
         X = X,
         y = y,
         theta0 = theta0,
@@ -275,7 +275,7 @@ mod_cap09_server <- function(id) {
         NULL
       }
 
-      senales <- rnas_calcular_senales_regimen(
+      senales <- DSNeuralRNAS::rnas_calcular_senales_regimen(
         trayectoria = trayectoria,
         loss_col = "loss",
         grad_col = "grad_norm",
@@ -284,7 +284,7 @@ mod_cap09_server <- function(id) {
         eps = 1e-12
       )
 
-      trayectoria_regimen <- rnas_clasificar_regimenes(
+      trayectoria_regimen <- DSNeuralRNAS::rnas_clasificar_regimenes(
         senales = senales,
         tau_loss = input$tau_loss,
         tau_grad = input$tau_grad,
@@ -295,14 +295,14 @@ mod_cap09_server <- function(id) {
         usar_suavizado = isTRUE(input$usar_suavizado)
       )
 
-      resumen <- rnas_resumen_regimenes(
+      resumen <- DSNeuralRNAS::rnas_resumen_regimenes(
         trayectoria_regimen = trayectoria_regimen,
         loss_col = "loss",
         grad_col = "grad_norm",
         speed_col = "speed"
       )
 
-      segmentos <- rnas_segmentar_regimenes(
+      segmentos <- DSNeuralRNAS::rnas_segmentar_regimenes(
         trayectoria_regimen = trayectoria_regimen,
         iter_col = "iter",
         loss_col = "loss",
@@ -310,7 +310,7 @@ mod_cap09_server <- function(id) {
         speed_col = "speed"
       )
 
-      analisis <- rnas_analizar_regimenes_neuron(
+      analisis <- DSNeuralRNAS::rnas_analizar_regimenes_neuron(
         object = dinamica,
         ventana = as.integer(input$ventana),
         tau_loss = input$tau_loss,

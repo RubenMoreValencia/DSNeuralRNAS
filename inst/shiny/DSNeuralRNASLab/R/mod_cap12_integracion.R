@@ -112,7 +112,7 @@ mod_cap12_server <- function(id) {
 
         theta0 <- rep(0, length(features) + 1L)
 
-        modelo <- rnas_integrar_std2(
+        modelo <- DSNeuralRNAS::rnas_integrar_std2(
           datos_std2 = datos,
           target = "y",
           features = features,
@@ -127,7 +127,7 @@ mod_cap12_server <- function(id) {
           tipo = tipo,
           datos = datos,
           resultado = modelo,
-          resumen = rnas_resumen_integracion(modelo)
+          resumen = DSNeuralRNAS::rnas_resumen_integracion(modelo)
         ))
       }
 
@@ -137,7 +137,7 @@ mod_cap12_server <- function(id) {
           escenario_sel = input$escenario
         )
 
-        modelo <- rnas_integrar_simuds(
+        modelo <- DSNeuralRNAS::rnas_integrar_simuds(
           trayectorias_simuds = tray,
           estado_cols = "s",
           target_estado = "s",
@@ -154,7 +154,7 @@ mod_cap12_server <- function(id) {
           tipo = tipo,
           datos = tray,
           resultado = modelo,
-          resumen = rnas_resumen_integracion(modelo)
+          resumen = DSNeuralRNAS::rnas_resumen_integracion(modelo)
         ))
       }
 
@@ -172,7 +172,7 @@ mod_cap12_server <- function(id) {
           cota_w1 = function(theta) theta[1] - input$c_w1
         )
 
-        fnl <- rnas_formular_fnl(
+        fnl <- DSNeuralRNAS::rnas_formular_fnl(
           X = X,
           y = y,
           activation = activation,

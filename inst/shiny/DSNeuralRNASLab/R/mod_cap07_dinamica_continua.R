@@ -61,7 +61,7 @@ mod_cap07_server <- function(id) {
       y <- datos$y
       theta0 <- c(input$w1, input$w2, input$b)
 
-      dinamica <- rnas_integrar_dinamica_neuron(
+      dinamica <- DSNeuralRNAS::rnas_integrar_dinamica_neuron(
         X = X,
         y = y,
         theta0 = theta0,

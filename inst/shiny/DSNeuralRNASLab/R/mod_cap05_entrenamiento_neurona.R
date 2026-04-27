@@ -69,13 +69,13 @@ mod_cap05_server <- function(id) {
   moduleServer(id, function(input, output, session) {
 
     res <- eventReactive(input$run, {
-      datos <- generar_datos_neurona_base()
+      datos <-generar_datos_neurona_base()
 
       X <- datos$X
       y <- datos$y
       theta0 <- c(input$w1, input$w2, input$b)
 
-      modelo <- rnas_train_neuron_control_eta(
+      modelo <- DSNeuralRNAS::rnas_train_neuron_control_eta(
         X = X,
         y = y,
         theta0 = theta0,

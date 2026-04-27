@@ -126,7 +126,7 @@ mod_cap04_server <- function(id) {
       w <- c(input$w1, input$w2)
       b <- input$b
 
-      loss <- rnas_loss_mse_neuron(
+      loss <- DSNeuralRNAS::rnas_loss_mse_neuron(
         X = X,
         y = y,
         w = w,
@@ -134,7 +134,7 @@ mod_cap04_server <- function(id) {
         activation = input$activation
       )
 
-      grad <- rnas_grad_neuron(
+      grad <- DSNeuralRNAS::rnas_grad_neuron(
         X = X,
         y = y,
         w = w,
@@ -142,7 +142,7 @@ mod_cap04_server <- function(id) {
         activation = input$activation
       )
 
-      grad_num <- rnas_grad_num_neuron(
+      grad_num <- DSNeuralRNAS::rnas_grad_num_neuron(
         X = X,
         y = y,
         w = w,
@@ -151,7 +151,7 @@ mod_cap04_server <- function(id) {
         h = input$h
       )
 
-      check <- rnas_grad_check_neuron(
+      check <- DSNeuralRNAS::rnas_grad_check_neuron(
         X = X,
         y = y,
         w = w,

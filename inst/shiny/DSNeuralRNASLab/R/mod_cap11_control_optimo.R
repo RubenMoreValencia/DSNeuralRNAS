@@ -249,7 +249,7 @@ mod_cap11_server <- function(id) {
         length.out = as.integer(input$n_eta_grid)
       )
 
-      grad0 <- rnas_grad_neuron(
+      grad0 <- DSNeuralRNAS::rnas_grad_neuron(
         X = X,
         y = y,
         w = theta0[1:2],
@@ -282,7 +282,7 @@ mod_cap11_server <- function(id) {
         })
       )
 
-      eta_opt <- rnas_eta_opt_local(
+      eta_opt <- DSNeuralRNAS::rnas_eta_opt_local(
         X = X,
         y = y,
         theta = theta0,
@@ -293,7 +293,7 @@ mod_cap11_server <- function(id) {
         beta = input$beta
       )
 
-      H <- rnas_hessian_num_neuron(
+      H <- DSNeuralRNAS::rnas_hessian_num_neuron(
         X = X,
         y = y,
         theta = theta0,
@@ -301,10 +301,10 @@ mod_cap11_server <- function(id) {
         h = input$h
       )
 
-      aut <- rnas_autovalores_hessian(H)
+      aut <- DSNeuralRNAS::rnas_autovalores_hessian(H)
       lambdas <- extraer_lambdas_cap11(aut)
 
-      curv <- rnas_curvatura_direccional(
+      curv <- DSNeuralRNAS::rnas_curvatura_direccional(
         H = H,
         v = grad_vec
       )
@@ -319,7 +319,7 @@ mod_cap11_server <- function(id) {
         "hibrida"
       }
 
-      eta_geo <- rnas_eta_policy_geo(
+      eta_geo <- DSNeuralRNAS::rnas_eta_policy_geo(
         eta0 = input$eta0,
         kappa = extraer_costo_local_cap11(curv),
         lambda_max = lambdas$lambda_max,
@@ -330,7 +330,7 @@ mod_cap11_server <- function(id) {
         eta_max = input$eta_max
       )
 
-      modelo <- rnas_train_neuron_meta_geo(
+      modelo <- DSNeuralRNAS::rnas_train_neuron_meta_geo(
         X = X,
         y = y,
         theta0 = theta0,
@@ -347,7 +347,7 @@ mod_cap11_server <- function(id) {
         evaluar_geo_cada = as.integer(input$evaluar_geo_cada)
       )
 
-      resumen <- rnas_resumen_meta_geo(
+      resumen <- DSNeuralRNAS::rnas_resumen_meta_geo(
         object = modelo,
         nombre_politica = input$metodo
       )

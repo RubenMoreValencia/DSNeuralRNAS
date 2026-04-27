@@ -71,7 +71,7 @@ mod_cap13_server <- function(id) {
       tipo <- input$tipo_caso
 
       if (tipo == "std2") {
-        caso <- rnas_caso_std2_controlado(
+        caso <- DSNeuralRNAS::rnas_caso_std2_controlado(
           n = as.integer(input$n_std2),
           horizonte = as.integer(input$horizonte),
           eta0 = input$eta0,
@@ -84,7 +84,7 @@ mod_cap13_server <- function(id) {
       }
 
       if (tipo == "simuds") {
-        caso <- rnas_caso_simuds_controlado(
+        caso <- DSNeuralRNAS::rnas_caso_simuds_controlado(
           n = as.integer(input$n_simuds),
           horizonte = as.integer(input$horizonte),
           eta0 = input$eta0,
@@ -97,7 +97,7 @@ mod_cap13_server <- function(id) {
       }
 
       if (tipo == "fnl") {
-        caso <- rnas_caso_fnl_controlado(
+        caso <- DSNeuralRNAS::rnas_caso_fnl_controlado(
           n = as.integer(input$n_fnl),
           activation = input$activation,
           seed = as.integer(input$seed)
@@ -107,7 +107,7 @@ mod_cap13_server <- function(id) {
       }
 
       if (tipo == "integral") {
-        casos <- rnas_ejecutar_casos_aplicados(
+        casos <- DSNeuralRNAS::rnas_ejecutar_casos_aplicados(
           n_std2 = as.integer(input$n_std2),
           n_simuds = as.integer(input$n_simuds),
           n_fnl = as.integer(input$n_fnl),

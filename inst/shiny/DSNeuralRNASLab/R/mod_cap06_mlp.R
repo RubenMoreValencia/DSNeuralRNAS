@@ -209,7 +209,7 @@ mod_cap06_server <- function(id) {
       tol_loss_val <- if (isTRUE(input$usar_tol_loss)) input$tol_loss else NULL
       tol_grad_val <- if (isTRUE(input$usar_tol_grad)) input$tol_grad else NULL
 
-      modelo <- rnas_train_mlp(
+      modelo <- DSNeuralRNAS::rnas_train_mlp(
         X = X,
         y = y,
         d_hidden = as.integer(input$d_hidden),
@@ -224,7 +224,7 @@ mod_cap06_server <- function(id) {
         registrar_cada = as.integer(input$registrar_cada)
       )
 
-      pred <- rnas_predict_mlp(
+      pred <- DSNeuralRNAS::rnas_predict_mlp(
         object = modelo,
         X = X,
         activation = input$activation

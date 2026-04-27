@@ -262,7 +262,7 @@ mod_cap08_server <- function(id) {
         length.out = as.integer(input$n_grid)
       )
 
-      grid_loss <- rnas_loss_grid_neuron(
+      grid_loss <- DSNeuralRNAS::rnas_loss_grid_neuron(
         X = X,
         y = y,
         w1_seq = w1_seq,
@@ -271,7 +271,7 @@ mod_cap08_server <- function(id) {
         activation = input$activation
       )
 
-      H <- rnas_hessian_num_neuron(
+      H <- DSNeuralRNAS::rnas_hessian_num_neuron(
         X = X,
         y = y,
         theta = theta,
@@ -279,16 +279,16 @@ mod_cap08_server <- function(id) {
         h = input$h
       )
 
-      autovalores <- rnas_autovalores_hessian(
+      autovalores <- DSNeuralRNAS::rnas_autovalores_hessian(
         H = H
       )
 
-      curvatura <- rnas_curvatura_direccional(
+      curvatura <- DSNeuralRNAS::rnas_curvatura_direccional(
         H = H,
         v = direccion
       )
 
-      resumen <- rnas_resumen_geometria_neuron(
+      resumen <- DSNeuralRNAS::rnas_resumen_geometria_neuron(
         X = X,
         y = y,
         theta = theta,
