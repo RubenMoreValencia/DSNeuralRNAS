@@ -232,7 +232,7 @@ mod_cap06_server <- function(id) {
 
       resumen <- tryCatch(
         {
-          rnas_resumen_entrenamiento_mlp(modelo)
+          DSNeuralRNAS::rnas_resumen_entrenamiento_mlp(modelo)
         },
         error = function(e) {
           NULL
