@@ -1,11 +1,11 @@
 Package: DSNeuralRNAS
 Type: Package
-Title: What the Package Does (Title Case)
+Title: What the Package Does (DSNeuralRNAS)
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Rubén", "More Valencia",
+      email = "rmorev@unp.edu.pe",
       role = c("aut", "cre")
     )
   )
