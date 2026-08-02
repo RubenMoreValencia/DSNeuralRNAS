@@ -9,8 +9,12 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: El proyecto DS Neural RNAS surge precisamente de esa necesidad: construir una
+base formal que permita estudiar el aprendizaje neuronal como un proceso dinámico.
+En este enfoque, los pesos y sesgos de una arquitectura neuronal no se interpretan únicamente 
+como coeficientes numéricos que se actualizan por una regla discreta, sino
+como estados que evolucionan en el tiempo bajo la influencia de la pérdida, el gradiente,
+la tasa de aprendizaje y la geometría del paisaje de optimización.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
